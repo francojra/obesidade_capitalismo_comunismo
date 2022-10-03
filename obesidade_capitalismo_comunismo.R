@@ -62,8 +62,11 @@ ggplot(obe1, aes(x = fct_reorder(Entity, media),
   scale_fill_manual(values = c("#88CCEE", "#CC6677", "#DDCC77",
                               "#117733", "#332288", "#AA4499")) +
   scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  scale_x_discrete(labels = c("Coreia do Norte", "Japão", "China",
+                              "Cuba", "Alemanha", "Estados Unidos")) +
   labs(x = "Países", y = "Porcentagem de mortes 
                           atribuídas a obesidade") +
-  theme_ipsum() +
+  theme_ipsum(axis_title_size = 16,
+              axis_text_size = 14) +
   theme(legend.position = "none",
         axis.text = element_text(color = "black"))
