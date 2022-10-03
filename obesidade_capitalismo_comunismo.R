@@ -45,3 +45,7 @@ obe1 <- obe %>%
             se = sd/sqrt(n)) %>%
   view()
 
+obe2 <- obe %>%
+    filter(Entity %in% c("United States", "Japan", "Germany",
+                       "China", "Cuba", "North Korea")) %>%
+  view()
