@@ -1,1 +1,1 @@
-# obesidade_capitalismo_comunismo
+# Obesidade em países comunistas e capitalistas
