@@ -22,6 +22,7 @@
 library(tidyverse)
 library(cols4all)
 library(hrbrthemes)
+library(ggthemes)
 
 # Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
@@ -48,6 +49,10 @@ obe1 <- obe %>%
 obe2 <- obe %>%
     filter(Entity %in% c("United States", "Japan", "Germany",
                        "China", "Cuba", "North Korea")) %>%
+  view()
+
+obe3 <- obe %>%
+    filter(Entity %in% c("United States", "China")) %>%
   view()
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
@@ -86,7 +91,19 @@ ggplot(obe2, aes(x = Year, y = obesidade_morte,
               axis_text_size = 14) +
   theme(axis.text = element_text(color = "black"))
 
+c4a("dark2", 2)
 
+ggplot(obe3, aes(x = Year, y = obesidade_morte, 
+                  group = Entity, col = Entity)) +
+  geom_line(size = 2.2) +
+  scale_color_manual(values = c("#1B9E77", "#D95F02"),
+                     labels = c("China", "Estados Unidos")) +
+  labs(x = "Tempo (anos)", y = "Mortes por obesidade (%)", 
+       color = "Países") +
+  theme_hc() +
+  theme(axis.title = element_text(size = 18),
+        axis.text = element_text(color = "black", size = 15),
+        legend.text = element_text(size = 12))
 
 
 
