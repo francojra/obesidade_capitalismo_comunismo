@@ -1,4 +1,4 @@
-# Obesidade em países comunistas e capitalistas
+# Obesidade em países democratas e autocratas
 
 ### Obesidade em países comunistas e capitalistas
 ### Autoria do script: Jeanne Franco
